@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ақылды Үй — 11 «А»</title>
+
+<style>
+:root{
+  --bg-dark:#0b0f19;
+  --bg-card:rgba(255,255,255,0.08);
+  --bg-glass:rgba(255,255,255,0.15);
+  --border-glass:rgba(255,255,255,0.25);
+  --text-main:#e2e8f0;
+  --text-muted:#94a3b8;
+  --neon-blue:#3b82f6;
+  --neon-cyan:#06b6d4;
+  --neon-purple:#8b5cf6;
+  --gradient:linear-gradient(135deg,#3b82f6,#8b5cf6,#06b6d4);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Inter",sans-serif;}
+body{background:var(--bg-dark);color:var(--text-main);padding-bottom:60px;}
+a{text-decoration:none;}
+
+/* Scroll Fix Dynamic */
+html { scroll-behavior: smooth; }
+
+/* Navbar */
+.navbar{
+  position: sticky;
+  top:0;
+  z-index:999;
+  background:var(--gradient);
+  padding:12px 0;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+.navbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.nav-link{color:white;font-weight:600;transition:0.3s;}
+.nav-link:hover{color:var(--neon-cyan);text-shadow:0 0 8px var(--neon-cyan);}
+
+/* Header */
+header{
+  background:var(--gradient);
+  padding:26px;
+  border-radius:18px;
+  color:white;
+  box-shadow:0 0 35px rgba(0,162,255,0.35);
+  text-align:center;
+  animation:glow 6s ease-in-out infinite;
+}
+@keyframes glow{
+  0%{box-shadow:0 0 25px rgba(0,162,255,0.3);}
+  50%{box-shadow:0 0 45px rgba(0,162,255,0.6);}
+  100%{box-shadow:0 0 25px rgba(0,162,255,0.3);}
+}
+
+/* Layout */
+.wrap{max-width:1200px;margin:auto;padding:18px;}
+.grid{display:grid;gap:20px;margin-top:20px;}
+.cols-3{grid-template-columns:1fr 380px;}
+
+/* Card */
+.card{
+  background:var(--bg-glass);
+  padding:20px;
+  border-radius:16px;
+  border:1px solid var(--border-glass);
+  backdrop-filter:blur(14px);
+  box-shadow:0 0 20px rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+.card:hover{box-shadow:0 0 35px rgba(0,195,255,0.25);transform:translateY(-3px);}
+.section-title{font-size:20px;margin-bottom:10px;font-weight:600;color:#ffffff;text-shadow:0 0 10px rgba(0,195,255,0.4);}
+.muted{color:var(--text-muted);}
+
+/* Inputs */
+textarea,input,select{
+  width:100%;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.2);
+  padding:10px;
+  border-radius:10px;
+  margin-top:6px;
+  color:white;
+}
+textarea:focus,input:focus,select:focus{outline:none;border-color:var(--neon-cyan);box-shadow:0 0 10px var(--neon-cyan);}
+
+/* Buttons */
+.btn{padding:10px 18px;border:none;border-radius:10px;background:var(--gradient);color:white;cursor:pointer;transition:0.3s;font-weight:600;box-shadow:0 0 12px rgba(0,195,255,0.4);}
+.btn:hover{transform:scale(1.05);}
+.btn-ghost{padding:10px 18px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.25);color:white;cursor:pointer;transition:0.3s;}
+.btn-ghost:hover{border-color:var(--neon-purple);box-shadow:0 0 12px var(--neon-purple);}
+
+/* YouTube */
+.video-wrap iframe{width:100%;height:260px;border-radius:14px;box-shadow:0 0 20px rgba(0,162,255,0.35);}
+
+/* Forum */
+.forum-post{background:rgba(255,255,255,0.06);padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);margin-bottom:10px;}
+
+/* Quiz */
+.quiz-options button{width:100%;margin-top:8px;padding:12px;border-radius:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:white;}
+.quiz-options button:hover{background:var(--gradient);border:none;}
+
+/* Footer */
+footer{text-align:center;margin-top:20px;color:var(--text-muted);padding:20px;}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="wrap">
+    <div style="font-weight:700;font-size:20px;">Ақылды Үй — 11 «А»</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="#objective" class="nav-link">Мақсаты</a>
+      <a href="#intro" class="nav-link">Кіріспе</a>
+      <a href="#explanation" class="nav-link">Сабақ түсіндірмесі</a>
+      <a href="#scenarios" class="nav-link">Сценарий</a>
+      <a href="#simulation" class="nav-link">Симуляция</a>
+      <a href="#quiz" class="nav-link">Викторина</a>
+      <a href="#forum" class="nav-link">Форум</a>
+      <a href="#reflection" class="nav-link">Рефлексия</a>
+      <a href="#scoreboard" class="nav-link">Ұпай</a>
+      <a href="#homework" class="nav-link">Үй тапсырмасы</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<header>
+  <h1>Ақылды Үй — Практикалық Сабақ</h1>
+  <p>11 «А» сыныбы | Мұғалім: Мұратбек Амангүл</p>
+</header>
+
+<main class="grid cols-3">
+
+<!-- LEFT SIDE -->
+<div>
+
+<!-- Objective -->
+<section id="objective" class="card">
+  <div class="section-title">Сабақтың мақсаты</div>
+  <p>11.5.2.4 — ақылды үй датчиктерінен алынған деректерді шығару;</p>
+  <p>11.5.2.5 — датчик деректерін шығару бағдарламаларын әзірлеу.</p>
+</section>
+
+<!-- Introduction Section -->
+<section id="intro" class="card">
+  <div class="section-title">Кіріспе</div>
+  <p>Бұл бөлімде сабақтың кіріспесі мен негізгі түсіндірмесі жазылады.</p>
+</section>
+
+<!-- ВИДЕО БӨЛІГІ -->
+<div class="video-wrap">
+  <video width="100%" height="auto" controls>
+    <source id="localVideoSource" src="video.mp4" type="video/mp4">
+    Сіздің браузеріңіз бұл видеоны ойната алмайды.
+  </video>
+</div>
+
+<!-- JavaScript арқылы видеоны ауыстыру -->
+<script>
+function changeVideo(filename) {
+  const source = document.getElementById('localVideoSource');
+  source.src = filename; // Жаңа файл атауы
+  const video = source.parentElement;
+  video.load(); // Жаңа видеоны жүктеу
+  video.play(); // Автоматты ойнату (қалауыңызша)
+}
+
+// Мысалы, видеоны өзгерту:
+changeVideo('Ақылды үй.mp4'); // Мұнда тек файл атын өзгерту жеткілікті
+</script>
+
+<!-- Explanation -->
+<section id="explanation" class="card">
+  <div class="section-title">Сабақ түсіндірмесі</div>
+  <p>Ақылды үй – бұл үйдегі барлық құрылғылар мен жүйелерді автоматты түрде немесе қашықтан басқаруға мүмкіндік беретін технология. Оның басты мақсаты – қолайлылық, қауіпсіздік және энергияны үнемдеу.</p>
+  <p><strong>Негізгі компоненттері:</strong></p>
+  <ol>
+    <li><strong>Сенсорлар (датчиктер):</strong>
+      <ul>
+        <li>Температура сенсоры – үйдегі жылу жүйесін автоматты түрде реттейді.</li>
+        <li>Ылғал сенсоры – ылғалдылық деңгейін бақылайды.</li>
+        <li>Қозғалыс сенсоры – қозғалыс анықталса, қауіпсіздік жүйесіне хабар береді немесе жарықты қосады.</li>
+        <li>Газ сенсоры – газ деңгейін тексереді, қауіпті жағдайда ескерту береді.</li>
+        <li>Жарық сенсоры – жарық деңгейін анықтап, шамдарды автоматты қосып/өшіре алады.</li>
+      </ul>
+    </li>
+    <li><strong>Құрылғылар (актуаторлар):</strong> Бұл сенсорлармен байланысатын құрылғылар: шамдар, термостаттар, кондиционерлер, қауіпсіздік камералары.</li>
+    <li><strong>Басқару жүйесі:</strong> Барлық құрылғыны бір қосымша арқылы басқаруға болады. Мысалы: мобильді қосымша, веб-платформа немесе дауыстық көмекші (Google Home, Alexa).</li>
+  </ol>
+  <p><strong>Артықшылықтары:</strong></p>
+  <ul>
+    <li>Барлық құрылғыны оңай басқаруға болады.</li>
+    <li>Жарық пен жылуды автоматты түрде реттеу арқылы энергия үнемдейді.</li>
+    <li>Қозғалыс немесе қауіпті жағдай анықталса, қауіпсіздік қамтамасыз етіледі.</li>
+    <li>Датчиктер деректерді жинап, аналитика жасауға мүмкіндік береді.</li>
+  </ul>
+  <p><strong>Мысалы:</strong></p>
+  <ul>
+    <li>Кешке жарық азайса, шамдар қосылады.</li>
+    <li>Қозғалыс анықталса, камера хабарлама жібереді.</li>
+    <li>Үй тым ыстық болса, кондиционер қосылады.</li>
+    <li>Газ деңгейі қауіпті болса, ескерту беріледі.</li>
+  </ul>
+  <p><strong>Қолдану салалары:</strong></p>
+  <ul>
+    <li>Жеке үйлер мен пәтерлер – күнделікті өмірді жеңілдету және қауіпсіздік.</li>
+    <li>Кәсіпорындар – автоматтандыру және қауіпсіздік.</li>
+    <li>Медициналық үйлер – қарттар мен науқастарды қадағалау.</li>
+  </ul>
+  <p><strong>Болашақ тенденциялар:</strong></p>
+  <ul>
+    <li>AI интеграциясы арқылы үй өзі үйреніп, алдын ала әрекет жасай алады.</li>
+    <li>IoT (Internet of Things) арқасында барлық құрылғы бір-бірімен байланысады.</li>
+    <li>Энергия тиімділігі артып, таза энергия көздерімен үйлестіріледі.</li>
+  </ul>
+  <p>Қорытындылай келе, ақылды үй – бұл тек технология емес, қауіпсіз, ыңғайлы және үнемді өмір сүрудің заманауи шешімі.</p>
+</section>
+
+<!-- Scenarios -->
+<section id="scenarios" class="card">
+  <div class="section-title">6 Жағдай — дұрыс датчикті таңда</div>
+  <div id="scenarioArea"></div>
+  <button class="btn" id="saveScenarios" style="margin-top:10px;">Сақтау</button>
+</section>
+
+<!-- Simulation -->
+<section id="simulation" class="card">
+  <div class="section-title">Датчик Симуляциясы</div>
+  <label>Температура (°C)</label>
+  <input id="inpTemp" type="number" value="26">
+  <label>Ылғалдық %</label>
+  <input id="inpHum" type="number" value="40">
+  <label>Газ (ppm)</label>
+  <input id="inpGas" type="number" value="50">
+  <label>Жарық (lux)</label>
+  <input id="inpLight" type="number" value="300">
+  <label>Қозғалыс</label>
+  <select id="inpMotion">
+    <option value="false">Жоқ</option>
+    <option value="true">Бар</option>
+  </select>
+  <div style="display:flex;gap:10px;margin-top:10px;">
+    <button class="btn" id="runSim">Симуляция</button>
+    <button class="btn-ghost" id="showPython">Python кодын көрсету</button>
+  </div>
+  <pre id="simOutput" style="margin-top:12px;white-space:pre-wrap;"></pre>
+</section>
+
+<!-- Quiz -->
+<section id="quiz" class="card">
+  <div class="section-title">Викторина — 10 сұрақ</div>
+  <div id="quizQuestion" style="font-size:18px;font-weight:600;"></div>
+  <div id="quizOptions" class="quiz-options"></div>
+  <button class="btn" id="nextQuiz" style="margin-top:10px;">Келесі</button>
+</section>
+
+</div>
+
+<!-- RIGHT SIDE -->
+<aside>
+
+<!-- Student Name -->
+<section class="card">
+  <div class="section-title">Оқушы аты</div>
+  <input type="text" id="studentName" placeholder="Аты-жөніңіз">
+</section>
+
+<!-- Forum -->
+<section id="forum" class="card">
+  <div class="section-title">Форум</div>
+  <textarea id="forumText" rows="3" placeholder="Пікір қалдыру..."></textarea>
+  <button class="btn" id="sendForum" style="margin-top:10px;">Жіберу</button>
+  <div id="posts" style="margin-top:12px;max-height:260px;overflow:auto;"></div>
+</section>
+
+<!-- Reflection -->
+<section id="reflection" class="card">
+  <div class="section-title">Рефлексия</div>
+  <textarea id="ref1" rows="2" placeholder="Маған ең қызық болған..."></textarea>
+  <textarea id="ref2" rows="2" placeholder="Не қиын болды?" style="margin-top:8px;"></textarea>
+  <button class="btn" id="sendRef" style="margin-top:10px;">Сақтау</button>
+</section>
+
+<!-- Scoreboard -->
+<section id="scoreboard" class="card">
+  <div class="section-title">Бағалау</div>
+  <div>Ұпай: <strong id="scoreDisplay">0</strong></div>
+  <button class="btn" id="saveScore" style="margin-top:8px;">Ұпайды сақтау</button>
+  <div id="scoreboardList" style="margin-top:10px;max-height:160px;overflow:auto;"></div>
+</section>
+
+<!-- Homework -->
+<section id="homework" class="card">
+  <div class="section-title">Үй тапсырмасы</div>
+  <ol>
+    <li>Ақылды үй сызбасын салу</li>
+    <li>4 датчикпен Python коды</li>
+    <li>Файлға жазу функциясы</li>
+  </ol>
+</section>
+
+</aside>
+
+</main>
+
+<footer>© 2025 | Ақылды Үй — Практикалық сабақ</footer>
+
+<script>
+// ===== DYNAMIC SCROLL-PADDING =====
+window.addEventListener('load', () => {
+  const navbar = document.querySelector('.navbar');
+  const height = navbar.offsetHeight;
+  document.documentElement.style.scrollPaddingTop = height + 'px';
+});
+
+// ===== SCENARIOS =====
+const SCENARIOS=[
+{id:1,title:"Кешкі уақытта жарық азайды",hint:"Жарық сенсоры"},
+{id:2,title:"Ауа сапасы нашарлады",hint:"Газ сенсоры"},
+{id:3,title:"Жолда кептеліс",hint:"Көлік санағыш"},
+{id:4,title:"Қоқыс толды",hint:"Толтыру сенсоры"},
+{id:5,title:"Түнде қозғалыс бар",hint:"Қозғалыс сенсоры"},
+{id:6,title:"Температура көтерілді",hint:"Температура сенсоры"},
+];
+function renderScenarios(){
+  const area=document.getElementById("scenarioArea");
+  area.innerHTML="";
+  SCENARIOS.forEach(s=>{
+    area.innerHTML+=`
+      <div class="card" style="border:1px solid rgba(255,255,255,0.18);margin-bottom:10px">
+        <div style="font-weight:600;">${s.title}</div>
+        <div class="muted">${s.hint}</div>
+        <select data-id="${s.id}">
+          <option value="">(таңдаңыз)</option>
+          <option>Температура сенсоры</option>
+          <option>Қозғалыс сенсоры</option>
+          <option>Жарық сенсоры</option>
+          <option>Газ сенсоры</option>
+          <option>Камера</option>
+          <option>Толтыру сенсоры</option>
+        </select>
+        <textarea data-ans="${s.id}" rows="2" placeholder="Әрекет жазыңыз..."></textarea>
+      </div>`;
+  });
+}
+renderScenarios();
+document.getElementById("saveScenarios").onclick = () => {
+  const name = document.getElementById("studentName").value.trim() || "Оқушы";
+  const arr = [];
+  document.querySelectorAll("#scenarioArea .card").forEach(card => {
+    const id = card.querySelector("select").dataset.id;
+    const sensor = card.querySelector("select").value;
+    const action = card.querySelector("textarea").value;
+    arr.push({id, sensor, action});
+  });
+  localStorage.setItem("scenariosAnswers", JSON.stringify({name, answers: arr}));
+  alert("Сценарий жауаптары сақталды!");
+};
+function loadScenarioAnswers() {
+  const saved = JSON.parse(localStorage.getItem("scenariosAnswers") || "null");
+  if(!saved) return;
+  document.getElementById("studentName").value = saved.name;
+  document.querySelectorAll("#scenarioArea .card").forEach(card => {
+    const id = card.querySelector("select").dataset.id;
+    const answer = saved.answers.find(a => a.id === id);
+    if(answer){
+      card.querySelector("select").value = answer.sensor;
+      card.querySelector("textarea").value = answer.action;
+    }
+  });
+}
+loadScenarioAnswers();
+
+// ===== SIMULATION =====
+document.getElementById("runSim").onclick=()=>{
+  const t=+inpTemp.value,h=+inpHum.value,g=+inpGas.value,l=+inpLight.value,m=inpMotion.value==="true";
+  let o=[];
+  o.push("Температура: "+t);
+  o.push("Ылғалдық: "+h);
+  o.push("Газ: "+g);
+  o.push("Жарық: "+l);
+  o.push("Қозғалыс: "+(m?"бар":"жоқ"));
+  if(t>30)o.push("Ескерту: Үй тым ыстық!");
+  if(g>100)o.push("Қауіп: Газ деңгейі жоғары!");
+  if(l<200)o.push("Жарық аз — шам қосылады.");
+  if(m)o.push("Қауіпсіздік камерасына белгі жіберілді.");
+  simOutput.textContent=o.join("\n");
+};
+document.getElementById("showPython").onclick=()=>{
+simOutput.textContent=
+`temperature = 31
+humidity = 40
+gas = 120
+light = 150
+motion = True
+print("Температура:", temperature)
+if temperature > 30:
+    print("Ескерту: Үй ыстық!")`;
+};
+
+// ===== QUIZ =====
+const QUIZ=[
+{q:"Датчик деген не?",opts:["Бағдарлама","Сенсор","Сервер"],a:1},
+{q:"Жарық сенсоры не үшін?",opts:["Жарықты өлшеу","Газды өлшеу","Температура"],a:0},
+{q:"Газ сенсоры:",opts:["Температура", "Газ деңгейі", "Жарық"],a:1},
+{q:"Қозғалыс сенсоры:",opts:["Асхана","Қауіпсіздік","Wi-Fi"],a:1},
+{q:"Температура сенсоры:",opts:["Жарық","Кондиционер","Газ"],a:1},
+{q:"Деректер қайда?",opts:["Бағдарламаға","Қағазға","Теледидарға"],a:0},
+{q:"Жарық аз болса:",opts:["Шам қосу","Терезе ашу","Ештеңе"],a:0},
+{q:"Қозғалыс анықталса:",opts:["Камера іске қосылады","Жылыту қосылады","Су қосылады"],a:0},
+{q:"Ақылды үйдің мақсаты:",opts:["Ыңғайлылық","Су көбейту","Телефон"],a:0},
+{q:"Негізгі артықшылығы:",opts:["Қауіпсіздік","Қымбат","Істемейді"],a:0}
+];
+
+let qi=0,score=0;
+function loadQuiz(){
+  if(qi>=QUIZ.length){
+    quizQuestion.textContent="Тест аяқталды! Ұпай: "+score+"/"+QUIZ.length;
+    quizOptions.innerHTML="";
+    return;
+  }
+  const q=QUIZ[qi];
+  quizQuestion.textContent=q.q;
+  quizOptions.innerHTML="";
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement("button");
+    b.textContent=o;
+    b.onclick=()=>{
+      if(i===q.a){score++;alert("Дұрыс!");}
+      else alert("Қате!");
+      scoreDisplay.textContent=score;
+      qi++;loadQuiz();
+    };
+    quizOptions.appendChild(b);
+  });
+}
+loadQuiz();
+document.getElementById("nextQuiz").onclick=()=>{qi++;loadQuiz();};
+
+// ===== FORUM =====
+function renderPosts(){
+  const arr=JSON.parse(localStorage.getItem("forum")||"[]");
+  posts.innerHTML="";
+  arr.forEach(p=>{
+    posts.innerHTML+=`
+      <div class="forum-post">
+        <strong>${p.user}</strong> — <span class="muted">${p.time}</span>
+        <div>${p.text}</div>
+      </div>`;
+  });
+}
+renderPosts();
+document.getElementById("sendForum").onclick=()=>{
+  const t=forumText.value.trim();
+  if(!t)return;
+  const name = document.getElementById("studentName").value.trim() || "Оқушы";
+  const arr=JSON.parse(localStorage.getItem("forum")||"[]");
+  arr.unshift({user:name,text:t,time:new Date().toLocaleString()});
+  localStorage.setItem("forum",JSON.stringify(arr));
+  forumText.value="";
+  renderPosts();
+};
+
+// ===== REFLECTION =====
+document.getElementById("sendRef").onclick=()=>{
+  const name = document.getElementById("studentName").value.trim() || "Оқушы";
+  const arr = JSON.parse(localStorage.getItem("reflections") || "[]");
+  arr.unshift({
+    user:name,
+    ref1: ref1.value,
+    ref2: ref2.value,
+    time: new Date().toLocaleString()
+  });
+  localStorage.setItem("reflections",JSON.stringify(arr));
+  alert("Рефлексия сақталды!");
+  ref1.value="";ref2.value="";
+};
+
+// ===== SCOREBOARD =====
+function renderScore(){
+  const arr=JSON.parse(localStorage.getItem("scoreboard")||"[]");
+  scoreboardList.innerHTML="";
+  arr.forEach(s=>{
+    scoreboardList.innerHTML+=`
+      <div style="margin-bottom:6px;background:rgba(255,255,255,0.07);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);">
+        <strong>${s.user}</strong>: ${s.score} ұпай
+        <div class="muted">${s.time}</div>
+      </div>`;
+  });
+}
+renderScore();
+document.getElementById("saveScore").onclick=()=>{
+  const name = document.getElementById("studentName").value.trim() || "Оқушы";
+  const arr=JSON.parse(localStorage.getItem("scoreboard")||"[]");
+  arr.unshift({user:name,score:score,time:new Date().toLocaleString()});
+  localStorage.setItem("scoreboard",JSON.stringify(arr));
+  renderScore();
+};
+</script>
+
+</body>
+</html>
